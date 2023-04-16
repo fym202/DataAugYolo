@@ -58,7 +58,7 @@
 
 ## 其他
 
-**项目的参考：**https://github.com/REN-HT/Data-Augmentation/blob/main/data_augmentation.py
+**项目的参考：**   https://github.com/REN-HT/Data-Augmentation/blob/main/data_augmentation.py
 
 根据上述项目修改而来，上述项目可以完成VOC格式数据的数据增强，本项目修改部分内容后可以完成YOLO格式数的数据增强，同时修改了原项目中一些小错误，增加了文件流等
 
