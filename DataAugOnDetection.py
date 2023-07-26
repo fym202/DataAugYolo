@@ -307,7 +307,7 @@ def runAugumentation(image_path, label_path, save_path):
 if __name__ == '__main__':
     # 图像和标签文件夹
     image_path = "./TestYoloSet/images"
-    label_path = "../TestYoloSet/labels"
+    label_path = "./TestYoloSet/labels"
     save_path = "./TestYoloSet/Augumentation"    # 结果保存位置路径，可以是一个不存在的文件夹
     # 运行
     runAugumentation(image_path, label_path, save_path)
