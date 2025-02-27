@@ -213,7 +213,8 @@ def get_image_list(image_path):
 
 def get_label_file(label_path, image_name):
     # 根据图片信息，查找对应的label
-    fname = os.path.join(label_path, image_name[0: len(image_name)-4]+".txt")
+
+    fname = os.path.join(label_path, os.path.splitext(image_name)[0]+".txt")
     data2 = []
     if not os.path.exists(fname):
         return data2
@@ -237,7 +238,7 @@ def save_Yolo(img, boxes, save_path, prefix, image_name):
         os.makedirs(os.path.join(save_path, "labels"))
     try:
         img.save(os.path.join(save_path, "images", prefix + image_name))
-        with open(os.path.join(save_path, "labels", prefix + image_name[0:len(image_name)-4] + ".txt"), 'w', encoding="utf-8") as f:
+        with open(os.path.join(save_path, "labels", prefix + os.path.splitext(image_name)[0] + ".txt"), 'w', encoding="utf-8") as f:
             if len(boxes) > 0:  # 判断是否为空
                 # 写入新的label到文件中
                 for data in boxes:
